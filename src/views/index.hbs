@@ -1,1 +1,139 @@
-<h1>hola mundo</h1>
+{{!-- Header --}}
+
+<header class="header">
+    <div class="header__info">
+        <p class="header__title">De emprendedores<br><span>Para emprendedores</span></p>
+        <div class="container__text">
+          <h1 class="header__text">Nuestro equipo está especializado en el desarrollo de sitios web, tiendas virtuales y aplicaciones.</h1><p class="header__text"> Actualmente nos centramos en ofrecer nuestros servicios a emprendimientos, negocios o empresas que quieran tener presencia en la web para promocionar y vender sus productos o servicios, captar más público y diferenciarse del resto al ofrecerle una mejor experiencia a sus usuarios.</p>
+        </div>
+        <a class="btn" href="/about#contact">
+          contáctanos
+        </a>
+    </div>
+
+    <a href="/about" class="header__logo"><img src="/SVG/logo.svg" alt="logo de witsite"></a>
+</header>
+
+{{!-- Scroll button --}}
+<a href="#carousel" class="scroll"><i class="bi bi-arrow-down-circle"></i></a>
+
+{{!-- Carousel --}}
+
+<section class="carousel" id="carousel">
+  {{!-- Carousel left arrow --}}
+  <button aria-label="Anterior" class="carousel__back">
+		<i class="bi bi-arrow-left-circle"></i>
+	</button>
+
+  {{!-- Carousel items --}}
+  <div class="glider">
+    {{#each proyects}}
+        <div class="glider__item">
+          <div class="proyect__img">
+            <img src="{{img}}" alt="">
+          </div>
+          <div class="proyect__info">
+            <p class="proyect__number">{{number}}</p>
+            <h6 class="proyect__name left">{{name}}</h6>
+            <p class="proyect__description left">{{description}}</p>
+            <ul class="proyect__links">
+              <li><a href="{{link}}" target="_blank"><i class="bi bi-link-45deg"></i></a></li>
+            </ul>
+          </div>
+        </div>
+    {{/each}}
+  </div>
+
+  {{!-- Carousel right arrow --}}
+  <button aria-label="Siguiente" class="carousel__next">
+		<i class="bi bi-arrow-right-circle"></i>
+	</button>
+</section>
+
+
+{{!-- information cards --}}
+
+<section class="cards">
+
+  <h2 class="title center">Mucho más que sitios web</h2>
+
+  <div class="cards__info">
+
+    <div class="cards__item">
+      <img src="/SVG/team.svg" alt="" class="cards__img--team">
+      <div>
+        <h3>Servicio técnico</h3>
+        <p>Nos tomamos el tiempo de explicarle a nuestros clientes como funciona el producto que les estamos ofreciendo (sitios web, tiendas o aplicaciones), y siempre estamos disponibles para aclarar dudas y resolver problemas.</p>
+      </div>
+    </div>  
+
+    <div class="cards__item">
+      <img src="/SVG/desing.svg" alt="" class="cards__img--desing">
+      <div>
+        <h3>Diseño e ilustración</h3>
+        <p>Los usuarios se quedan más tiempo en un sitio web lindo, original y dinámico, por esa razón, un buen diseño marca la diferencia. Creamos diseños origiles basados en tu logo, tus colores, estampados, ilustraciones o cualquier recurso gráfico enlazado a tu marca, y si no los tienes, los creamos.</p>
+      </div>
+    </div>
+
+    <div class="cards__item">
+      <img src="/SVG/mockup.svg" alt="" class="cards__img--mockup">
+      <div>
+        <h3>Interfaz de usuario</h3>
+        <p>Simple e intuitivo, queremos que incluso el usuario menos relacionado con la tecnología sea capaz de navegar por tu sitio web y entender fácilmente lo que quieres transmitir.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards__item--more">
+    <div class="cards__header service">
+      <h2>Nos adaptamos a tus necesidades</h2>
+      <div class="cards__img">
+        <img src="/images/home1.png" alt="">
+      </div>
+    </div>
+    <div class="cards__main service">
+      <h3 class="right">Tiempo y costo</h3>
+      <p>Como cada proyecto es distinto, hasta saber específicamente que es lo que el cliente necesita, no podemos dar un tiempo ni un precio concreto, pero dependiendo del tamaño del proyecto y la cantidad de requerimientos, nuestros precios van de 50$ a 200$ en casos normales (Como esta página), y de 200$ a 500$ en proyectos mucho más grandes. Y nuestro tiempo de trabajo estimado va de dos semanas a dos meses (en proyectos normales nos tomamos de dos semanas a un mes). <br><br> <a href="/about" class="right">Más información</a></p>
+    </div>
+  </div>
+
+  <div class="cards__item--more info">
+    <div class="cards__header info">
+      <h2>Nos encanta nuestro trabajo</h2>
+      <div class="cards__img">
+        <img src="/images/home2.png" alt="">
+      </div>
+    </div>
+    <div class="cards__main info">
+      <h3 class="left">Descúbrenos</h3>
+      <p>Nuestra ética de trabajo se basa en la honestidad, el respeto y la confianza. Somos transparentes contigo, entendemos que tener un sitio web puede ser nuevo para la mayoría, por eso te explicamos como es nuestro flujo de trabajo y te recomendamos las mejores opciones dependiendo de tus objetivos y tu presupuesto, la decisión final siempre es tuya. <br><br> <a href="/about">Más información</a></p>
+    </div>
+  </div>
+
+  <div class="cards__item--more">
+    <div class="cards__header service">
+      <h2>Precios adaptados para Venezuela</h2>
+      <div class="cards__img">
+        <img src="/images/price.png" alt="">
+      </div>
+    </div>
+    <div class="cards__main service">
+      <h3 class="right">No te detengas</h3>
+      <p>Los sitios web son una inversión, y tienen el objetivo de atraer más clientes, llegar a más lugares o hacerte destacar entre la competencia. Pero los precios de los sitios web que van más allá de una simple plantilla de wordpress son muy inaccesibles en Venezuela, para eso existe witsite. Si tienes un negocio y quieres tener un sitio web 100% personalizado y con un servicio de calidad, por un precio accesible, contáctanos!!! <br><br> <a href="/budget" class="right">Más información</a></p>
+    </div>
+  </div>
+</section>
+
+{{!-- Scroll button --}}
+<a href="#call" class="scroll"><i class="bi bi-arrow-down-circle"></i></a>
+
+{{!-- Call to action --}}
+
+<div class="call__background">
+  <div class="call__content">
+    <h4 class="title center" id="call">¿Quieres dar un paso más allá?</h4>
+    <a href="/budget" class="btn">pide tu presupuesto</a>
+  </div>
+</div>
+
+{{> footer }}

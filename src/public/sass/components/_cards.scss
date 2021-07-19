@@ -1,0 +1,176 @@
+.cards {
+	position: relative;
+	margin-bottom: 179px;
+
+	h2.title.center {
+		padding: $padding;
+	}
+}
+
+.cards__info {
+	max-width: 1300px;
+	width: 100vw;
+	margin-bottom: 172px;
+	margin-top: 129px;
+	padding: 0 $padding;
+	display: flex;
+	justify-content: space-between;
+}
+
+.cards__item:nth-child(2) {
+	margin: 0 20px;
+}
+
+.cards__item:hover {
+	transform: translateY(-50px);
+}
+
+.cards__item {
+	background: #111111;
+	box-shadow: 0px 7px 16px 4px rgba(0, 0, 0, 0.25);
+	max-width: 381px;
+	width: 100%;
+	min-height: 600px;
+	padding: 0 $padding;
+	transition: 0.35s;
+	display: grid;
+	grid-template-rows: 200px auto-fill;
+	border-radius: 5px;
+	position: relative;
+	cursor: pointer;
+
+	img {
+		align-self: center;
+		justify-self: center;
+		max-width: 80%;
+		width: 100%;
+	}
+
+	h3 {
+		font-size: 1.7194rem;
+		font-weight: 700;
+		margin: 0;
+		width: 100%;
+	}
+
+	p {
+		line-height: 23.19px;
+		text-align: justify;
+		margin: 0;
+		margin-top: 15px;
+		width: 100%;
+	}
+}
+
+// Segunda sección de targetas.
+.cards__item--more {
+	position: relative;
+	max-width: 1238px;
+	width: 100%;
+	padding: $padding;
+}
+
+.cards__item--more:hover {
+	.cards__main {
+		transform: translateY(-25px);
+	}
+
+	.cards__header {
+		img {
+			opacity: 1;
+		}
+	}
+}
+
+.cards__header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	h2 {
+		font-size: 2.7819rem;
+		width: 100%;
+		margin-bottom: 30px;
+		font-weight: 700;
+	}
+
+	.cards__img {
+		background: linear-gradient(
+			rgba(25, 209, 231, 0.5),
+			rgba(243, 17, 224, 0.5)
+		);
+		min-width: 640px;
+		min-height: 382px;
+		height: 382px;
+		position: relative;
+		filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.25));
+	}
+
+	img {
+		height: 100%;
+		width: 100%;
+		opacity: 0.6;
+		transition: 0.5s;
+		object-fit: cover;
+	}
+}
+
+.cards__header.service {
+	align-items: flex-start;
+
+	h2 {
+		text-align: left;
+	}
+}
+
+.cards__header.info {
+	align-items: flex-end;
+
+	h2 {
+		text-align: right;
+	}
+}
+
+.cards__main {
+	max-width: 896px;
+	width: 100%;
+	padding: $padding 0;
+	transition: 0.35s;
+	position: absolute;
+	bottom: 26px;
+
+	h3 {
+		margin: 0;
+		font-size: 1.7194rem;
+		font-weight: 700;
+	}
+
+	a {
+		display: block;
+		font-weight: 800;
+	}
+
+	a:hover {
+		color: #cd83e2;
+		transition: 0.25s;
+	}
+
+	p {
+		background: #111111;
+		box-shadow: 0px 7px 15px 10px rgba(0, 0, 0, 0.25);
+		border-radius: 5px;
+		line-height: 23.19px;
+		padding: $padding;
+		margin: 0;
+		margin-top: 16px;
+		text-align: justify;
+	}
+}
+
+.cards__main.service {
+	right: $padding;
+}
+
+.cards__item--more.info {
+	margin: 166px 0;
+}

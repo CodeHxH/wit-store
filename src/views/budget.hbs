@@ -1,0 +1,238 @@
+<section class='budget__info'>
+	<h1>Háblanos de tu proyecto...</h1>
+	<p>Si estás aquí significa que quieres darle a tu empresa presencia en la web.
+		Este cuestionario es un primer contacto para el desarrollo de tu Identidad
+		en la web, lo cual puede mejorar la comunicación con tus usuarios y la
+		imagen que se llevan de tu producto o servicio.
+		<br /><br />
+
+		Con el fin de evaluar si es posible una futura colaboración con Witsite,
+		primero tenemos que conocernos un poco más, así que a continuación te
+		dejamos una serie de preguntas que nos gustaría que respondieras.
+		<br /><br />
+
+		<span class='gray'>Tómate tu tiempo, sólo te llevará 5 minutos.</span><br
+		/><br />
+
+		<span>¿Comenzamos?</span>
+	</p>
+</section>
+
+<form action='/send-budget' method='POST' id='form' class='form budget__form'>
+	{{! Nombre del cliente }}
+	<div class='budget__group'>
+		<p class='group__title'>¿Cómo te llamas?</p>
+		<p class='group__text'>Dinos tu nombre para poder referirnos a ti.</p>
+
+		<div class='form__group' id='group__clientName'>
+			<div class='form__group--input'>
+				<input type='text' name='clientName' class='input' id='clientName' />
+				<i class='bi'></i>
+			</div>
+			<p class='form__error'>El nombre tiene que ser de 4 a 16 dígitos y solo
+				puede contener letras.</p>
+		</div>
+	</div>
+	{{! Teléfono del cliente }}
+	<div class='budget__group'>
+		<p class='group__title'>Ingresa tu número de télefono</p>
+		<p class='group__text'>Necesitamos tu número telefónico para
+			poder contactarte.</p>
+
+		<div class='form__group' id='group__clientPhone'>
+			<div class='form__group--input'>
+				<input type='text' name='clientPhone' class='input' id='clientPhone' />
+				<i class='bi'></i>
+			</div>
+			<p class='form__error'>El teléfono solo puede contener numeros y el maximo son 14 dígitos.</p>
+		</div>
+	</div>
+	{{! Email del cliente }}
+	<div class='budget__group'>
+		<p class='group__title'>Ingresa tu Email</p>
+
+		<div class='form__group' id='group__clientEmail'>
+			<div class='form__group--input'>
+				<input type='text' name='clientEmail' class='input' id='clientEmail' />
+				<i class='bi'></i>
+			</div>
+			<p class='form__error'>El correo solo puede contener letras, numeros,
+				puntos, guiones y guion bajo.</p>
+		</div>
+	</div>
+	{{! País del cliente }}
+	<div class='budget__group'>
+		<p class='group__title'>¿De qué país nos contactas?</p>
+
+		<div class='form__group' id='group__clientCountry'>
+			<div class='form__group--input'>
+				<input type='text' name='clientCountry' class='input' id='clientCountry' />
+				<i class='bi'></i>
+			</div>
+			<p class='form__error'>El nombre país tiene que ser de 4 a 16 dígitos y
+				solo puede contener letras.</p>
+		</div>
+	</div>
+	{{! Tipo de negocio }}
+	<div class='budget__group'>
+		<p class='group__title'>¿De qué se trata tu negocio?
+		</p>
+		<p class='group__text'>Explicanos brevemente cuál es la finalidad de tu
+			negocio y que tipo de producto o servicio ofrece.</p>
+
+		<div class='form__group' id='group__businessType'>
+			<div class='form__group--input'>
+				<input type='text' name='businessType' class='input' id='businessType' />
+				<i class='bi'></i>
+			</div>
+			<p class='form__error'>Este campo es necesario.</p>
+		</div>
+	</div>
+	{{! Tipo de proyecto }}
+	<div class='budget__group'>
+		<p class='group__title'>¿Qué tipo de proyecto quieres que hagamos?</p>
+		<div class='form__group--select' id='group__proyectType'>
+			<div class='form__group--input'>
+				<input type='radio' name='proyectType' value="Un sitio web personal" id='option_1A' />
+				<input type='radio' name='proyectType' value="Un sitio web empresarial" id='option_2A' />
+				<input type='radio' name='proyectType' value="Una tienda virtual" id='option_3A' />
+				<input type='radio' name='proyectType' value="Una aplicación web" id='option_4A' />
+				<input type='radio' name='proyectType' value="Un sitio web con wordpress" id='option_5A' />
+				<input type='radio' name='proyectType' value="Aún no lo sé" id='option_6A' />
+
+				
+
+
+				<label class='form__option--1A' for='option_1A'></label>
+				<p>Un sitio web personal</p>
+				<label class='form__option--2A' for='option_2A'></label>
+				<p>Un sitio web empresarial</p>
+				<label class='form__option--3A' for='option_3A'></label>
+				<p>Una tienda virtual</p>
+				<label class='form__option--4A' for='option_4A'></label>
+				<p>Una aplicación web</p>
+				<label class='form__option--5A' for='option_5A'></label>
+				<p>Un sitio web con wordpress</p>
+				<label class='form__option--6A' for='option_6A'></label>
+				<p>Aún no lo sé</p>
+			</div>
+		</div>
+	</div>
+	{{! Objetivo del cliente }}
+	<div class='budget__group'>
+		<p class='group__title'>¿Qué quieres lograr con un sitio web?</p>
+		<p class='group__text'>Un sitio web puede tener distintos objetivos.
+			Informar sobre un servicio, vender un producto o llegar a más personas, son
+			algunos de los objetivos que puede tener</p>
+
+		<div class='form__group' id='group__clientGoal'>
+			<div class='form__group--input'>
+				<input type='text' name='clientGoal' class='input' id='clientGoal' />
+				<i class='bi'></i>
+			</div>
+			<p class='form__error'>Este campo es necesario.</p>
+
+		</div>
+	</div>
+	{{! Nombre del negocio }}
+	<div class='budget__group'>
+		<p class='group__title'>¿Tu negocio tiene un nombre?</p>
+		<p class='group__text'>Escribe el nombre de tu negocio.</p>
+
+		<div class='form__group' id='group__businessName'>
+			<div class='form__group--input'>
+				<input type='text' name='businessName' class='input' id='businessName' />
+				<i class='bi'></i>
+			</div>
+		</div>
+	</div>
+	{{! Identidad visual }}
+	<div class='budget__group'>
+		<p class='group__title'>¿Tu negocio tiene identidad visual?
+		</p>
+		<p class='group__text'>Con esto nos referimos a un logo, iconografia,
+			estampados, ilustraciones o cualquier otro recurso gráfico asociado a su
+			marca, y del cual podamos disponer en el proyecto.</p>
+
+		<div class='form__group--select' id='group__graphicElements'>
+			<div class='form__group--input'>
+				<input type='radio' name='graphicElements' value="Si" id='option_1B' />
+				<input type='radio' name='graphicElements' value="No" id='option_2B' />
+
+				<label class='form__option--1B' for='option_1B'></label>
+				<p>Si</p>
+				<label class='form__option--2B' for='option_2B'></label>
+				<p>No</p>
+			</div>
+		</div>
+	</div>
+	{{! Usuarios }}
+	<div class='budget__group'>
+		<p class='group__title'>¿Qué cantidad de usuarios va a tener o tiene tu
+			negocio?</p>
+		<div class='form__group--select' id='group__usersNumber'>
+			<div class='form__group--input'>
+				<input type='radio' name='usersNumber' value="Menos de 100" id='option_1C' />
+				<input type='radio' name='usersNumber' value="De 100 a 200" id='option_2C' />
+				<input type='radio' name='usersNumber' value="De 200 a 500" id='option_3C' />
+				<input type='radio' name='usersNumber' value="De 500 a 1000" id='option_4C' />
+				<input type='radio' name='usersNumber' value="Más de 1000" id='option_5C' />
+
+				<label class='form__option--1C' for='option_1C'></label>
+				<p>Menos de 100</p>
+				<label class='form__option--2C' for='option_2C'></label>
+				<p>De 100 a 200</p>
+				<label class='form__option--3C' for='option_3C'></label>
+				<p>De 200 a 500</p>
+				<label class='form__option--4C' for='option_4C'></label>
+				<p>De 500 a 1000</p>
+				<label class='form__option--5C' for='option_5C'></label>
+				<p>Más de 1000</p>
+			</div>
+		</div>
+	</div>
+	{{! Redes sociales }}
+	<div class='budget__group'>
+		<p class='group__title'>¿Tu negocio dispone de redes sociales?</p>
+		<p class='group__text'>Si es así, adjunta los enlaces aquí.
+		</p>
+
+		<div class='form__group' id='group__socialNetwork'>
+			<div class='form__group--input'>
+				<input type='text' name='socialNetwork' class='input' id='socialNetwork' />
+				<i class='bi'></i>
+			</div>
+		</div>
+	</div>
+	{{! Fecha límite }}
+	<div class='budget__group'>
+		<p class='group__title'>¿Tenemos alguna fecha límite?</p>
+		<p class='group__text'>*Información opcional*</p>
+
+		<div class='form__group' id='group__deadline'>
+			<div class='form__group--input'>
+				<input type='date' name='deadline' class='input date' id='deadline' />
+				<i class='bi'></i>
+			</div>
+		</div>
+	</div>
+	{{! Mensaje }}
+	<div class='budget__group'>
+		<p class='group__title'>¿Hay algo más que quieras decirnos?</p>
+		<p class='group__text'>*Información opcional*</p>
+
+		<div class='form__group--textarea' id='group__budgetMessage'>
+			<div class='form__group--input'>
+				<textarea name='budgetMessage'></textarea>
+			</div>
+		</div>
+	</div>
+
+	{{! Submit Button }}
+	<div class='btn__right'><button
+			type='submit'
+			class='btn'
+		>Enviar</button></div>
+</form>
+
+{{>footer}}

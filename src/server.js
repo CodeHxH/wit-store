@@ -1,10 +1,10 @@
-const handlebars = require('handlebars');
 const express = require('express');
 const exphbs = require('express-handlebars');
-const session = require('express-session');
+const handlebars = require('handlebars');
 const flash = require('connect-flash');
 const morgan = require('morgan');
 const path = require('path');
+const session = require('express-session');
 
 // initialization
 const app = express();
@@ -40,6 +40,7 @@ app.use(flash());
 // Global Variables
 app.use((req, res, next) => {
 	res.locals.success_msg = req.flash('success_msg');
+	res.locals.error_msg = req.flash('error_msg');
 	next();
 });
 
