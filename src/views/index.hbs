@@ -1,1 +1,63 @@
-<h1>Hola mundo</h1>
+<div class="nav__bg">
+	<div class="nav__color--white">
+		{{>nav}}
+	</div>
+</div>
+
+<header class='carrousel'>
+	<img src='/img/header2.jpg' alt='' class='carrousel__item' />
+	<img src='/img/header1.jpg' alt='' class='carrousel__item' />
+	<img src='/img/header3.jpg' alt='' class='carrousel__item' />
+</header>
+
+<article class='feed'>
+	<h3 class='feed__title'>Lo Nuevo</h3>
+	<a href='#' class='feed__link'>Ver todos</a>
+
+	<section>
+		{{#each products}}
+			<a href="#" class='feed__product'>
+				<img src='{{img}}' alt='' />
+				<h2>{{name}}</h2>
+				<p>$ {{price}}.00 USD</p>
+			</a>
+		{{/each}}
+
+		<a href='#' class='feed__product--more'>
+			<img src='/img/product5.jpg' alt='' />
+			<div class='more__text'>
+				<i class='bi bi-plus-lg'></i>
+				<p>Otros</p>
+			</div>
+		</a>
+	</section>
+</article>
+
+<article class="categories">
+	<a href='#' class='categorie'>
+		<img src='/img/product6.jpg' alt='' />
+		<div class='categorie__title'>
+			<p>Figuras</p>
+		</div>
+	</a>
+	<a href='#' class='categorie'>
+		<img src='/img/product7.jpg' alt='' />
+		<div class='categorie__title'>
+			<p>Ropa</p>
+		</div>
+	</a>
+	<a href='#' class='categorie'>
+		<img src='/img/product5.jpg' alt='' />
+		<div class='categorie__title'>
+			<p>Accesorios</p>
+		</div>
+	</a>
+	<a href='#' class='categorie'>
+		<img src='/img/product4.jpg' alt='' />
+		<div class='categorie__title'>
+			<p>Otros</p>
+		</div>
+	</a>
+</article>
+
+{{>footer}}

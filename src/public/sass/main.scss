@@ -1,1 +1,10 @@
+// components
+@import './components/global';
+@import './components/header';
+@import './components/feed';
+@import './components/nav';
+@import './components/categories';
+@import './components/footer';
 
+// responsive components
+@import './components/responsive.components/pc.scss';

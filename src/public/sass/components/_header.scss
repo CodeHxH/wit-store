@@ -1,0 +1,11 @@
+.carrousel {
+	width: 100%;
+	overflow-x: hidden;
+
+	.carrousel__item {
+		width: 100vw;
+		max-height: 334px;
+		object-fit: cover;
+		object-position: center;
+	}
+}

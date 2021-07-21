@@ -1,0 +1,69 @@
+.footer {
+	width: 100vw;
+	margin-top: 100px;
+	height: 586px;
+	background-color: #111;
+	position: relative;
+
+	* {
+		color: #fff;
+	}
+
+	.footer__message {
+		background-color: #000;
+		width: 100%;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.footer__politics {
+		padding: 20px;
+		width: 100%;
+		margin: auto;
+		list-style: none;
+
+		li {
+			margin: 15px 0;
+		}
+
+		li:first-child {
+			font-weight: 500;
+		}
+	}
+
+	.footer__contact {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		bottom: 0;
+
+		img {
+			width: 178px;
+			margin-bottom: 62px;
+		}
+
+		.footer__social {
+			width: 100%;
+			max-width: 198px;
+			margin: auto;
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+
+			i {
+				font-size: 29px;
+			}
+		}
+
+		footer {
+			margin-top: 30px;
+			width: 100%;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+	}
+}

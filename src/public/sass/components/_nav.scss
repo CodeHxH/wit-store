@@ -1,0 +1,27 @@
+.nav__bg {
+	width: 100vw;
+	height: 100px;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	z-index: 1000;
+}
+
+.nav__color--white {
+	i {
+		color: #fff;
+	}
+}
+
+nav {
+	position: fixed;
+	padding: 0 28px;
+	width: 100vw;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	i {
+		font-size: 24px;
+	}
+}
