@@ -14,16 +14,19 @@
 	<h3 class='feed__title'>Lo Nuevo</h3>
 	<a href='#' class='feed__link'>Ver todos</a>
 
-	<section>
+	<section class='feed__products'>
 		{{#each products}}
-			<a href="#" class='feed__product'>
+			<figure class='imghvr-shutter-out-diag-1 feed__product' data-aos="fade-up">
 				<img src='{{img}}' alt='' />
-				<h2>{{name}}</h2>
-				<p>$ {{price}}.00 USD</p>
-			</a>
+				<figcaption>
+					<h2>{{name}}</h2>
+					<p>$ {{price}}.00 USD</p>
+				</figcaption>
+				<a href='#'></a>
+			</figure>
 		{{/each}}
 
-		<a href='#' class='feed__product--more'>
+		<a href='#' class='feed__product--more' data-aos="fade-up">
 			<img src='/img/product5.jpg' alt='' />
 			<div class='more__text'>
 				<i class='bi bi-plus-lg'></i>
@@ -34,25 +37,25 @@
 </article>
 
 <article class="categories">
-	<a href='#' class='categorie'>
+	<a href='#' class='categorie' data-aos="fade-up">
 		<img src='/img/product6.jpg' alt='' />
 		<div class='categorie__title'>
 			<p>Figuras</p>
 		</div>
 	</a>
-	<a href='#' class='categorie'>
+	<a href='#' class='categorie' data-aos="fade-up">
 		<img src='/img/product7.jpg' alt='' />
 		<div class='categorie__title'>
 			<p>Ropa</p>
 		</div>
 	</a>
-	<a href='#' class='categorie'>
+	<a href='#' class='categorie' data-aos="fade-up">
 		<img src='/img/product5.jpg' alt='' />
 		<div class='categorie__title'>
 			<p>Accesorios</p>
 		</div>
 	</a>
-	<a href='#' class='categorie'>
+	<a href='#' class='categorie' data-aos="fade-up">
 		<img src='/img/product4.jpg' alt='' />
 		<div class='categorie__title'>
 			<p>Otros</p>

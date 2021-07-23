@@ -8,3 +8,5 @@ $(document).ready(function () {
 		autoplaySpeed: 5000,
 	});
 });
+
+AOS.init();

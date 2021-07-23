@@ -17,7 +17,7 @@
 	line-height: 25px;
 }
 
-section {
+.feed__products {
 	margin-top: 25px;
 	display: grid;
 	row-gap: 50px;
@@ -52,6 +52,12 @@ section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
+	transition: 0.5s;
+
+	* {
+		transition: 0.5s;
+	}
 
 	img {
 		position: absolute;
