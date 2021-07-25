@@ -1,0 +1,40 @@
+{{>nav}}
+
+<div class="products__header">
+	<form action="">
+		<input
+			type="text"
+			class="barra-busqueda"
+			id="barra-busqueda"
+			placeholder="Buscar"
+		/>
+	</form>
+	<div class="categorias" id="categorias">
+		<a href="#" class="activo">Todos</a>
+		<a href="#">Consolas</a>
+		<a href="#">Juegos</a>
+		<a href="#">Figuras</a>
+		<a href="#">Ropa</a>
+	</div>
+</div>
+
+{{! Feed section }}
+<article class='feed'>
+	<section class='feed__products' id="grid">
+		{{#each products}}
+			<figure
+				class='imghvr-shutter-out-diag-1 feed__product'
+				data-aos='fade-up'
+			>
+				<img src='{{img}}' alt='' />
+				<figcaption>
+					<h2>{{name}}</h2>
+					<p>$ {{price}}.00 USD</p>
+				</figcaption>
+				<a href='#'></a>
+			</figure>
+		{{/each}}
+	</section>
+</article>
+
+{{>footer}}

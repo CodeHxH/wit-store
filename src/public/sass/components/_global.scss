@@ -5,6 +5,10 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+.container {
+	position: relative;
+}
+
 body {
 	font-size: 17px;
 	background-color: #ffffff;
@@ -19,6 +23,10 @@ a {
 
 a:hover {
 	color: rgb(160, 160, 160);
+}
+
+button:hover {
+	cursor: pointer;
 }
 
 ul {
