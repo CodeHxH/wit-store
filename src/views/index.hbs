@@ -16,26 +16,7 @@
 	<h3 class='feed__title'>Lo Nuevo</h3>
 	<a href='/products' class='feed__link'>Ver todos</a>
 
-	<section class='feed__products'>
-		{{#each products}}
-			<figure class='imghvr-shutter-out-diag-1 feed__product' data-aos="fade-up">
-				<img src='{{img}}' alt='' />
-				<figcaption>
-					<h2>{{name}}</h2>
-					<p>$ {{price}}.00 USD</p>
-				</figcaption>
-				<a href='#'></a>
-			</figure>
-		{{/each}}
-
-		<a href='#' class='feed__product--more' data-aos="fade-up">
-			<img src='/img/product5.jpg' alt='' />
-			<div class='more__text'>
-				<i class='bi bi-plus-lg'></i>
-				<p>Otros</p>
-			</div>
-		</a>
-	</section>
+	{{>items}}
 </article>
 
 {{!-- Categories --}}

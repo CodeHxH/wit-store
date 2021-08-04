@@ -1,0 +1,54 @@
+{{>nav}}
+
+<h2 class="product__title">{{item.name}}</h2>
+
+<article class="product__container">
+
+	<img src='{{item.img}}' alt='' class=" product__img"/>
+
+	<form action="">
+		<div class="size">
+			<input type="radio" name="size" class="hidden" value="Pequeña" id="s">
+			<input type="radio" name="size" class="hidden" value="Mediana" id="m">
+			<input type="radio" name="size" class="hidden" value="Grande" id="l">
+			<input type="radio" name="size" class="hidden" value="Extra Grande" id="xl">
+
+			<label class="product__size size-s" for="s">Pequeña</label>
+			<label class="product__size size-m" for="m">Mediana</label>
+			<label class="product__size size-l" for="l">Grande</label>
+			<label class="product__size size-xl" for="xl">Extra Grande</label>
+		</div> 
+
+		<a href="#" class="size__info">¿No encuentras tu talla?</a>
+
+		<div class="product__quantity">
+			<button class="more">-</button>
+			<input type="number" name="" min="1" value="1" class="quantity" id="">
+			<button class="less">+</button>
+		</div>
+
+		<p class="product__price">$ {{item.price}}.00 USD</p>
+
+		<button class="product__add">Agregar</button>
+
+		<div class="product__description">
+			<p class="product__description--title">Descripción:</p>
+
+			<p class="product__description--text">{{item.description}}</p>
+
+			<ul>
+				<li><i class="bi bi-shield-lock"></i>Tu compra e información es 100% segura</li>
+				<li><i class="bi bi-box-seam"></i> Envíos a toda Venezuela</li>
+			</ul>
+		</div>
+	</form>
+</article>
+
+<article class='feed'>
+	<h3 class='feed__title'>Otros Productos</h3>
+	<a href='/products' class='feed__link'>Ver todos</a>
+
+	{{>items}}
+</article>
+
+{{>footer}}

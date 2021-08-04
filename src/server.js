@@ -5,6 +5,7 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const morgan = require('morgan');
 const path = require('path');
+const { v4 } = require('uuid');
 
 // initialization
 const app = express();
@@ -36,6 +37,8 @@ app.use(
 	})
 );
 app.use(flash());
+
+//console.log(v4());
 
 // Global Variables
 app.use((req, res, next) => {

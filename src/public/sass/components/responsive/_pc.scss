@@ -67,4 +67,19 @@
 	.footer__politics {
 		max-width: calc(100% - 200px);
 	}
+
+	//product
+	.product__container {
+		flex-direction: row;
+		align-items: flex-start;
+
+		form {
+			padding: 0 20px 0 50px;
+			align-items: flex-start;
+		}
+
+		.size {
+			justify-content: flex-start;
+		}
+	}
 }
