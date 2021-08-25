@@ -6,16 +6,36 @@ const {
 	renderProduct,
 	renderSingin,
 	renderSingup,
+	renderCart,
+	addProduct,
+	deleteProduct,
 } = require('../controllers/index.controllers');
 
-router.get('/', renderIndex);
+// Crear una cookie para el carrito
+const { createCart } = require('../helpers/auth');
 
-router.get('/products', renderProducts);
+// Index
+router.get('/', createCart, renderIndex);
 
-router.get('/products/:id', renderProduct);
+// Productos
+router.get('/products', createCart, renderProducts);
 
+// Producto
+router.get('/products/:id', createCart, renderProduct);
+
+// Inicio de sesión
 router.get('/singin', renderSingin);
 
+// Registro
 router.get('/singup', renderSingup);
+
+// Carrito
+router.get('/cart', createCart, renderCart);
+
+// Añadir productos al carrito
+router.post('/add-product', createCart, addProduct);
+
+// Eliminar productos del carrito
+router.post('/delete-product', createCart, deleteProduct);
 
 module.exports = router;

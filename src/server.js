@@ -5,7 +5,7 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const morgan = require('morgan');
 const path = require('path');
-const { v4 } = require('uuid');
+const cookieParser = require('cookie-parser');
 
 // initialization
 const app = express();
@@ -26,6 +26,7 @@ app.engine(
 app.set('view engine', '.hbs');
 
 // middlewares
+app.use(cookieParser());
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

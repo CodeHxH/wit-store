@@ -53,30 +53,99 @@ const products = [
 	},
 ];
 
+// Index
 indexCtrl.renderIndex = (req, res) => {
 	res.render('index', { products });
 };
 
+// Productos
 indexCtrl.renderProducts = (req, res) => {
 	res.render('products', { products });
 };
 
+// Producto
 indexCtrl.renderProduct = (req, res) => {
 	let item;
+
 	products.forEach((product) => {
 		if (product.id == req.params.id) {
 			item = product;
 		}
 	});
+
 	res.render('product', { item, products });
 };
 
+// Inicio de sesión
 indexCtrl.renderSingin = (req, res) => {
 	res.render('singin');
 };
 
+// Registro
 indexCtrl.renderSingup = (req, res) => {
 	res.render('singup');
+};
+
+// Carrito
+indexCtrl.renderCart = (req, res) => {
+	res.render('cart');
+};
+
+// Añadir productos al carrito
+indexCtrl.addProduct = (req, res) => {
+	let product;
+
+	// Obteniendo el producto
+	products.forEach((item) => {
+		if (item.id == req.body.id) {
+			product = item;
+		}
+	});
+
+	// Creando el item para el carrito
+	const item = {
+		product: product,
+		quantity: req.body.quantity,
+		size: req.body.size,
+	};
+
+	// Obteniendo el carrito
+	let cart = req.cookies.cart;
+
+	// Agregando el producto al carrito
+	cart.push(item);
+
+	// Guardando los cambios del carrito
+	res.cookie('cart', cart);
+
+	// render cart
+	res.redirect('/products');
+};
+
+// Eliminar productos del carrito
+indexCtrl.deleteProduct = (req, res) => {
+	let cart = req.cookies.cart;
+
+	let counter = 0;
+
+	let drop;
+
+	// Obteniendo el índice del producto
+	cart.forEach((item) => {
+		counter++;
+
+		if (item.product.id == req.params.id) {
+			drop = counter;
+		}
+	});
+
+	// Borrando el producto
+	cart.splice(drop, 1);
+
+	// Guardando los cambios del carrito
+	res.cookie('cart', cart);
+
+	res.redirect('/cart');
 };
 
 module.exports = indexCtrl;
