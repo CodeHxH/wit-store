@@ -4,10 +4,12 @@
 
 <article class="product__container">
 
-	<img src='{{item.img}}' alt='' class=" product__img"/>
+	<img src='{{item.img}}' alt='' class="product__img"/>
 
 	<form action="/add-product" method="POST">
 		<input type="hidden" value="{{item.id}}" id="id" name="id">
+
+		{{#if item.type}}
 		<div class="size">
 			<input type="radio" name="size" class="hidden" value="Pequeña" id="s">
 			<input type="radio" name="size" class="hidden" value="Mediana" checked id="m">
@@ -21,6 +23,7 @@
 		</div> 
 
 		<a href="#" class="size__info">¿No encuentras tu talla?</a>
+		{{/if}}
 
 		<div class="product__quantity">
 			<button type="button" class="more" onclick="">-</button>

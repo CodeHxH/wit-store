@@ -86,4 +86,13 @@
 			justify-content: flex-start;
 		}
 	}
+
+	.cookies {
+		justify-content: flex-start;
+		align-items: flex-end;
+		.cookies__banner {
+			margin: 25px;
+			margin-bottom: 40px;
+		}
+	}
 }

@@ -24,6 +24,22 @@ function toggleMenu(state) {
 	}
 }
 
+// Cookies
+const cookie = document.getElementById('cookies');
+
+if (localStorage.getItem('cart')) {
+	cookie.classList.add('cookies-hidden');
+} else {
+	// Poner baner de cookies
+	cookie.classList.remove('cookies-hidden');
+}
+
+function cookiesAlert() {
+	// Quitar baner de cookies
+	cookie.classList.add('cookies-hidden');
+	localStorage.setItem('cart', true);
+}
+
 // search
 const searchBar = document.getElementById('barra-busqueda');
 const categories = document.querySelectorAll('#categorias a');

@@ -13,7 +13,6 @@ const products = [
 	},
 	{
 		id: 'a2fed2b9-3b4e-4e47-bebe-063ab267feab',
-		type: 'juegos',
 		labels: 'clothing',
 		price: 50.0,
 		name: 'Mario Kart 8 Deluxe',
@@ -33,7 +32,6 @@ const products = [
 	},
 	{
 		id: '4eb1361a-684f-45db-bce4-507b5b5ab9e3',
-		type: 'juegos',
 		labels: 'clothing',
 		price: 50.0,
 		name: 'Super Mario Odyssey',
@@ -43,7 +41,6 @@ const products = [
 	},
 	{
 		id: 'f8b3efb8-4acf-45bd-aca8-ddba96e9d0ed',
-		type: 'juegos',
 		labels: 'clothing',
 		price: 60.0,
 		name: 'Smash Bros Ultimate',
@@ -88,7 +85,10 @@ indexCtrl.renderSingup = (req, res) => {
 
 // Carrito
 indexCtrl.renderCart = (req, res) => {
-	res.render('cart');
+	// Obteniendo el carrito
+	const cart = req.cookies.cart;
+
+	res.render('cart', { cart });
 };
 
 // Añadir productos al carrito
@@ -103,16 +103,26 @@ indexCtrl.addProduct = (req, res) => {
 	});
 
 	// Creando el item para el carrito
-	const item = {
-		product: product,
-		quantity: req.body.quantity,
-		size: req.body.size,
-	};
+
+	let item;
+
+	if (product.type) {
+		item = {
+			product: product,
+			quantity: req.body.quantity,
+			size: req.body.size,
+		};
+	} else {
+		item = {
+			product: product,
+		};
+	}
 
 	// Obteniendo el carrito
 	let cart = req.cookies.cart;
 
 	// Agregando el producto al carrito
+
 	cart.push(item);
 
 	// Guardando los cambios del carrito
