@@ -1,24 +1,49 @@
 {{>nav}}
 
-<h2>Tu carrito</h2>
+<h2 class="cart__title">Tu carrito</h2>
 
-<section>
-    <p>Sub-Total</p>
-    <p>$00.00</p>
-    <p>Hacemos envios nacionales con pago a destino.</p>
+<article class="cart">
+    <section class="cart__info">
+        <p class="cart__total">Sub-Total</p>
+        {{#if price}}
+        <p class="cart__price">{{price}}.00$</p>
+        {{else}}
+        <p class="cart__price">$00.00</p>
+        {{/if}}
+        <p class="cart__tag">Hacemos envios nacionales con pago a destino.</p>
 
-    <button>Volver</button>
-    <button>Comprar</button>
-    <button>paypal</button>
-</section>
+        <div>
+            <button class="btn__dark btn__cart">Volver</button>
+            <button class="btn__light btn__cart">Comprar</button>
+        </div>
 
-{{!-- <section>
-    <article>
-        {{#each cart}}
-        <img src="{{product.img}}" class="product__img" alt="">
-        {{/each}}
-        
-    </article>
-</section> --}}
+        <button class="btn__paypal"><img src="/svg/paypal-color.svg" alt=""></button>
+    </section>
+
+    <section class="cart__products">
+        {{#if cart}}
+            {{#each cart}}
+                <div class="cart__product">
+                    <img src="{{product.img}}" alt="">
+
+                    <div class="cart__product--info">
+                        <p class="cart__product--name">{{product.name}}</p>
+                        {{#if product.type}}
+                        <p class="cart__product--size">Talla. {{size}}</p>
+                        {{/if}}
+                        <p class="cart__product--quantity">Cantidad. {{quantity}}</p>
+                        <p class="cart__product--price">{{product.price}}.00$</p>
+                        <a href="/delete-product/{{product.id}}">Eliminar <i class="bi bi-trash-fill"></i></a>
+                    </div>
+                </div>
+            {{/each}}
+        {{else}}
+            <div class="cart__product--else">
+                <i class="bi bi-plus-square"></i>
+                <p>No hay productos</p>
+            </div>
+        {{/if}}
+    </section>
+</article>
 
 {{>footer}}

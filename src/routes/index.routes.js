@@ -36,6 +36,6 @@ router.get('/cart', createCart, renderCart);
 router.post('/add-product', createCart, addProduct);
 
 // Eliminar productos del carrito
-router.post('/delete-product', createCart, deleteProduct);
+router.get('/delete-product/:id', createCart, deleteProduct);
 
 module.exports = router;

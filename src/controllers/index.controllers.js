@@ -88,7 +88,13 @@ indexCtrl.renderCart = (req, res) => {
 	// Obteniendo el carrito
 	const cart = req.cookies.cart;
 
-	res.render('cart', { cart });
+	let price = 0;
+
+	cart.forEach((item) => {
+		price += item.product.price;
+	});
+
+	res.render('cart', { cart, price });
 };
 
 // Añadir productos al carrito
@@ -115,6 +121,7 @@ indexCtrl.addProduct = (req, res) => {
 	} else {
 		item = {
 			product: product,
+			quantity: req.body.quantity,
 		};
 	}
 
@@ -154,6 +161,8 @@ indexCtrl.deleteProduct = (req, res) => {
 
 	// Guardando los cambios del carrito
 	res.cookie('cart', cart);
+
+	console.log(req.cookies.cart);
 
 	res.redirect('/cart');
 };
