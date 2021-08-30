@@ -3,6 +3,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
 const flash = require('connect-flash');
+const methodOverride = require('method-override');
 const morgan = require('morgan');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -26,6 +27,7 @@ app.engine(
 app.set('view engine', '.hbs');
 
 // middlewares
+app.use(methodOverride('_method'));
 app.use(cookieParser());
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));

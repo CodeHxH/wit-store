@@ -33,7 +33,10 @@
                         {{/if}}
                         <p class="cart__product--quantity">Cantidad. {{quantity}}</p>
                         <p class="cart__product--price">{{product.price}}.00$</p>
-                        <a href="/delete-product/{{product.id}}">Eliminar <i class="bi bi-trash-fill"></i></a>
+                        <form action="/delete-product/{{product.id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button>Eliminar <i class="bi bi-trash-fill"></i></button>
+                        </form>
                     </div>
                 </div>
             {{/each}}

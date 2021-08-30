@@ -91,7 +91,9 @@ indexCtrl.renderCart = (req, res) => {
 	let price = 0;
 
 	cart.forEach((item) => {
-		price += item.product.price;
+		for (let i = 0; i < item.quantity; i++) {
+			price += item.product.price;
+		}
 	});
 
 	res.render('cart', { cart, price });
