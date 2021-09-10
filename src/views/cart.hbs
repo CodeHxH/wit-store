@@ -27,15 +27,15 @@
                     <img src="{{product.img}}" alt="">
 
                     <div class="cart__product--info">
-                        <p class="cart__product--name">{{product.name}}</p>
+                        <p class="cart__product--name"><span>{{product.name}}</span></p>
                         {{#if product.type}}
-                        <p class="cart__product--size">Talla. {{size}}</p>
+                        <p class="cart__product--size"><span>Talla.</span> {{size}}</p>
                         {{/if}}
-                        <p class="cart__product--quantity">Cantidad. {{quantity}}</p>
-                        <p class="cart__product--price">{{product.price}}.00$</p>
-                        <form action="/delete-product/{{product.id}}?_method=DELETE" method="POST">
+                        <p class="cart__product--quantity"><span>Cantidad.</span> {{quantity}}</p>
+                        <p class="cart__product--price"><span>{{product.price}}.00$</span></p>
+                        <form action="/delete-product/{{id}}?_method=DELETE" method="POST">
                             <input type="hidden" name="_method" value="DELETE">
-                            <button>Eliminar <i class="bi bi-trash-fill"></i></button>
+                            <button class="cart__btn--delete"><span>Eliminar</span> <i class="bi bi-trash-fill"></i></button>
                         </form>
                     </div>
                 </div>

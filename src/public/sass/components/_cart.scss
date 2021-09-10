@@ -61,6 +61,10 @@
 			margin: 25px 0;
 			display: flex;
 
+			span {
+				font-weight: 500;
+			}
+
 			img {
 				width: 150px;
 				height: 150px;
@@ -71,6 +75,14 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
+
+				.cart__btn--delete {
+					transition: 0.25s;
+				}
+
+				.cart__btn--delete:hover {
+					color: rgb(211, 0, 0);
+				}
 			}
 		}
 	}

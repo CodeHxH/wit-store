@@ -1,5 +1,7 @@
 const indexCtrl = {};
 
+const uuid = require('uuid');
+
 const products = [
 	{
 		id: '8b94c317-20e0-45a6-a75c-baf500c53b57',
@@ -90,6 +92,7 @@ indexCtrl.renderCart = (req, res) => {
 
 	let price = 0;
 
+	// Calculando el valor del carrito
 	cart.forEach((item) => {
 		for (let i = 0; i < item.quantity; i++) {
 			price += item.product.price;
@@ -111,7 +114,6 @@ indexCtrl.addProduct = (req, res) => {
 	});
 
 	// Creando el item para el carrito
-
 	let item;
 
 	if (product.type) {
@@ -119,11 +121,13 @@ indexCtrl.addProduct = (req, res) => {
 			product: product,
 			quantity: req.body.quantity,
 			size: req.body.size,
+			id: uuid.v4(),
 		};
 	} else {
 		item = {
 			product: product,
 			quantity: req.body.quantity,
+			id: uuid.v4(),
 		};
 	}
 
@@ -131,7 +135,6 @@ indexCtrl.addProduct = (req, res) => {
 	let cart = req.cookies.cart;
 
 	// Agregando el producto al carrito
-
 	cart.push(item);
 
 	// Guardando los cambios del carrito
@@ -151,10 +154,10 @@ indexCtrl.deleteProduct = (req, res) => {
 
 	// Obteniendo el índice del producto
 	cart.forEach((item) => {
-		counter++;
-
-		if (item.product.id == req.params.id) {
+		if (item.id == req.params.id) {
 			drop = counter;
+		} else {
+			counter++;
 		}
 	});
 
@@ -163,8 +166,6 @@ indexCtrl.deleteProduct = (req, res) => {
 
 	// Guardando los cambios del carrito
 	res.cookie('cart', cart);
-
-	console.log(req.cookies.cart);
 
 	res.redirect('/cart');
 };
