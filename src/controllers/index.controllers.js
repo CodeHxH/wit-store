@@ -6,7 +6,8 @@ const products = [
 	{
 		id: '8b94c317-20e0-45a6-a75c-baf500c53b57',
 		type: true,
-		labels: 'Ropa',
+		label: 'Ropa',
+		tags: 'ropa',
 		name: 'Camiseta Lost in Paradise',
 		price: 10.0,
 		description:
@@ -15,7 +16,8 @@ const products = [
 	},
 	{
 		id: 'a2fed2b9-3b4e-4e47-bebe-063ab267feab',
-		labels: 'Juegos',
+		label: 'Juegos',
+		tags: 'juegos',
 		price: 50.0,
 		name: 'Mario Kart 8 Deluxe',
 		description:
@@ -25,7 +27,8 @@ const products = [
 	{
 		id: 'eaf123fd-36e5-4e0e-b146-2c280c91aadc',
 		type: true,
-		labels: 'clothing',
+		label: 'Ropa',
+		tags: 'ropa',
 		price: 8.0,
 		name: 'Camiseta To The Top',
 		description:
@@ -34,7 +37,8 @@ const products = [
 	},
 	{
 		id: '4eb1361a-684f-45db-bce4-507b5b5ab9e3',
-		labels: 'clothing',
+		label: 'Juegos',
+		tags: 'juegos',
 		price: 50.0,
 		name: 'Super Mario Odyssey',
 		description:
@@ -43,7 +47,8 @@ const products = [
 	},
 	{
 		id: 'f8b3efb8-4acf-45bd-aca8-ddba96e9d0ed',
-		labels: 'clothing',
+		label: 'Juegos',
+		tags: 'juegos',
 		price: 60.0,
 		name: 'Smash Bros Ultimate',
 		description:
@@ -52,7 +57,8 @@ const products = [
 	},
 	{
 		id: 'f8b3efb8-4acf-45bd-aca8-ddba96ed0ed',
-		labels: 'clothing',
+		label: 'Juegos',
+		tags: 'juegos',
 		price: 60.0,
 		name: 'The Legend of Zelda',
 		description:
@@ -61,7 +67,8 @@ const products = [
 	},
 	{
 		id: 'f8b3efb8-4acf-45bd-aca8-ddb96e9d0ed',
-		labels: 'clothing',
+		label: 'Consolas',
+		tags: 'juegos',
 		price: 420.0,
 		name: 'Xbox series X',
 		description:
@@ -71,7 +78,8 @@ const products = [
 	{
 		id: 'f8b3efb8-4acf-45d-aca8-ddba96e9d0ed',
 		type: true,
-		labels: 'clothing',
+		label: 'Ropa',
+		tags: 'ropa',
 		price: 9.0,
 		name: "Because i'm here",
 		description:
@@ -80,7 +88,8 @@ const products = [
 	},
 	{
 		id: 'f8b3fb8-4acf-45bd-aca8-ddba96e9d0ed',
-		labels: 'clothing',
+		label: 'Consolas',
+		tags: 'juegos',
 		price: 450.0,
 		name: 'PlayStation 5',
 		description:
@@ -89,7 +98,8 @@ const products = [
 	},
 	{
 		id: 'fb3efb8-4acf-45bd-aca8-ddba96e9d0ed',
-		labels: 'clothing',
+		label: 'Juegos',
+		tags: 'juegos',
 		price: 56.0,
 		name: 'Mario Party',
 		description:
@@ -98,7 +108,8 @@ const products = [
 	},
 	{
 		id: 'f8b3efb8-4acf-45bd-aca8-ddba96e9d0d',
-		labels: 'clothing',
+		label: 'Figuras',
+		tags: 'figuras',
 		price: 32.0,
 		name: 'Kamado Nezuko',
 		description:
@@ -108,7 +119,8 @@ const products = [
 	{
 		id: 'f8b3efb8-4acf-45bd-aca8-ddba96e9d',
 		type: true,
-		labels: 'clothing',
+		label: 'Ropa',
+		tags: 'ropa',
 		price: 10.0,
 		name: 'Todoroki',
 		description:
@@ -118,7 +130,8 @@ const products = [
 	{
 		id: 'f8b3efb8-4acf-45bd-aca8-ddbae9d0d',
 		type: true,
-		labels: 'clothing',
+		label: 'Ropa',
+		tags: 'ropa',
 		price: 10.0,
 		name: 'Neon Genesis Evangelion',
 		description:
@@ -128,7 +141,8 @@ const products = [
 	{
 		id: 'f8b3e8-4acf-45bd-aca8-ddba96e9d0d',
 		type: true,
-		labels: 'clothing',
+		label: 'Ropa',
+		tags: 'ropa',
 		price: 10.0,
 		name: 'Bakugo',
 		description:

@@ -47,13 +47,12 @@ const products = document.querySelectorAll('#grid .feed__product');
 
 searchBar.addEventListener('keyup', (input) => {
 	products.forEach((product) => {
-		//
 		const productLabel = product.dataset.etiquetas;
 		const compare = productLabel.indexOf(input.target.value.toLowerCase());
 		if (compare >= 0) {
-			product.classList.remove('hiden');
+			product.classList.remove('hidden');
 		} else {
-			product.classList.add('hiden');
+			product.classList.add('hidden');
 		}
 	});
 });
@@ -70,13 +69,13 @@ categories.forEach((element) => {
 
 		products.forEach((product) => {
 			if (product.dataset.categoria == category) {
-				product.classList.remove('hiden');
+				product.classList.remove('hidden');
 			} else {
-				product.classList.add('hiden');
+				product.classList.add('hidden');
 			}
 
 			if (category == 'Todos') {
-				product.classList.remove('hiden');
+				product.classList.remove('hidden');
 			}
 		});
 	});

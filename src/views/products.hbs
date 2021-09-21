@@ -22,7 +22,7 @@
 <article class='feed'>
 	<section class='feed__products' id="grid">
 		{{#each products}}
-		<figure class='imghvr-shutter-out-diag-1 feed__product' data-aos='fade-up'>
+		<figure class='imghvr-shutter-out-diag-1 feed__product' data-categoria="{{label}}" data-etiquetas="{{tags}}">
 			<img src='{{img}}' alt='' />
 			<figcaption>
 				<a href='/products/{{id}}' class='feed__product--info'>
