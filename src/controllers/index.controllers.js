@@ -5,8 +5,8 @@ const uuid = require('uuid');
 const products = [
 	{
 		id: '8b94c317-20e0-45a6-a75c-baf500c53b57',
-		type: 'ropa',
-		labels: 'clothing',
+		type: true,
+		labels: 'Ropa',
 		name: 'Camiseta Lost in Paradise',
 		price: 10.0,
 		description:
@@ -15,7 +15,7 @@ const products = [
 	},
 	{
 		id: 'a2fed2b9-3b4e-4e47-bebe-063ab267feab',
-		labels: 'clothing',
+		labels: 'Juegos',
 		price: 50.0,
 		name: 'Mario Kart 8 Deluxe',
 		description:
@@ -24,7 +24,7 @@ const products = [
 	},
 	{
 		id: 'eaf123fd-36e5-4e0e-b146-2c280c91aadc',
-		type: 'ropa',
+		type: true,
 		labels: 'clothing',
 		price: 8.0,
 		name: 'Camiseta To The Top',
@@ -50,11 +50,102 @@ const products = [
 			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
 		img: '/img/smash.png',
 	},
+	{
+		id: 'f8b3efb8-4acf-45bd-aca8-ddba96ed0ed',
+		labels: 'clothing',
+		price: 60.0,
+		name: 'The Legend of Zelda',
+		description:
+			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
+		img: '/img/Zelda.png',
+	},
+	{
+		id: 'f8b3efb8-4acf-45bd-aca8-ddb96e9d0ed',
+		labels: 'clothing',
+		price: 420.0,
+		name: 'Xbox series X',
+		description:
+			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
+		img: '/img/seriesx.jpg',
+	},
+	{
+		id: 'f8b3efb8-4acf-45d-aca8-ddba96e9d0ed',
+		type: true,
+		labels: 'clothing',
+		price: 9.0,
+		name: "Because i'm here",
+		description:
+			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
+		img: '/img/ropa.png',
+	},
+	{
+		id: 'f8b3fb8-4acf-45bd-aca8-ddba96e9d0ed',
+		labels: 'clothing',
+		price: 450.0,
+		name: 'PlayStation 5',
+		description:
+			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
+		img: '/img/ps5.jpg',
+	},
+	{
+		id: 'fb3efb8-4acf-45bd-aca8-ddba96e9d0ed',
+		labels: 'clothing',
+		price: 56.0,
+		name: 'Mario Party',
+		description:
+			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
+		img: '/img/MarioParty.png',
+	},
+	{
+		id: 'f8b3efb8-4acf-45bd-aca8-ddba96e9d0d',
+		labels: 'clothing',
+		price: 32.0,
+		name: 'Kamado Nezuko',
+		description:
+			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
+		img: '/img/figuras.png',
+	},
+	{
+		id: 'f8b3efb8-4acf-45bd-aca8-ddba96e9d',
+		type: true,
+		labels: 'clothing',
+		price: 10.0,
+		name: 'Todoroki',
+		description:
+			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
+		img: '/img/product3.jpg',
+	},
+	{
+		id: 'f8b3efb8-4acf-45bd-aca8-ddbae9d0d',
+		type: true,
+		labels: 'clothing',
+		price: 10.0,
+		name: 'Neon Genesis Evangelion',
+		description:
+			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
+		img: '/img/product4.jpg',
+	},
+	{
+		id: 'f8b3e8-4acf-45bd-aca8-ddba96e9d0d',
+		type: true,
+		labels: 'clothing',
+		price: 10.0,
+		name: 'Bakugo',
+		description:
+			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
+		img: '/img/product5.jpg',
+	},
 ];
+
+let indexProducts = [];
+
+for (let i = 0; i < 5; i++) {
+	indexProducts.push(products[i]);
+}
 
 // Index
 indexCtrl.renderIndex = (req, res) => {
-	res.render('index', { products });
+	res.render('index', { indexProducts });
 };
 
 // Productos
@@ -72,7 +163,7 @@ indexCtrl.renderProduct = (req, res) => {
 		}
 	});
 
-	res.render('product', { item, products });
+	res.render('product', { item, indexProducts });
 };
 
 // Inicio de sesión
