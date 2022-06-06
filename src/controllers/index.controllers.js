@@ -8,7 +8,7 @@ const products = [
 		type: true,
 		label: 'Ropa',
 		tags: 'ropa',
-		name: 'Camiseta Lost in Paradise',
+		name: 'Camiseta Toga Himiko',
 		price: 10.0,
 		description:
 			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
@@ -30,7 +30,7 @@ const products = [
 		label: 'Ropa',
 		tags: 'ropa',
 		price: 8.0,
-		name: 'Camiseta To The Top',
+		name: 'Hoodie Killua',
 		description:
 			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
 		img: '/img/product2.jpg',
@@ -122,7 +122,7 @@ const products = [
 		label: 'Ropa',
 		tags: 'ropa',
 		price: 10.0,
-		name: 'Todoroki',
+		name: 'Zero Two',
 		description:
 			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
 		img: '/img/product3.jpg',
@@ -133,7 +133,7 @@ const products = [
 		label: 'Ropa',
 		tags: 'ropa',
 		price: 10.0,
-		name: 'Neon Genesis Evangelion',
+		name: 'Midoriya Izuku',
 		description:
 			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
 		img: '/img/product4.jpg',
@@ -144,7 +144,7 @@ const products = [
 		label: 'Ropa',
 		tags: 'ropa',
 		price: 10.0,
-		name: 'Bakugo',
+		name: 'Paripi Koumei',
 		description:
 			'Camiseta básica, 50% algodón 50% poliéster, bordado reflejante, hecha en USA.',
 		img: '/img/product5.jpg',
