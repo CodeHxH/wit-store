@@ -4,7 +4,7 @@ This is a web aplication using nodejs, express and handlebars.
 
 <br>
 
-![Home page](src\public\img\readme-image.png)
+![Home page](src/public/img/readme-image.png)
 
 <br>
 
